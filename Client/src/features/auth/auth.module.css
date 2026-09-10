@@ -1,0 +1,107 @@
+.page {
+  min-height: calc(100dvh - 80px);
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  padding: clamp(24px, 5vw, 40px);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  animation: enter 350ms ease both;
+}
+
+.eyebrow {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.card h1 {
+  margin-bottom: 12px;
+  color: var(--color-text);
+  font-size: clamp(28px, 5vw, 36px);
+}
+
+.description {
+  margin-bottom: 28px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 20px;
+}
+
+.hint,
+.switchText {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.switchText {
+  text-align: center;
+}
+
+.switchText a {
+  color: var(--color-text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.error,
+.success {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.success {
+  margin-bottom: 20px;
+  color: var(--color-success);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+}
+/* Pearl 02 component surfaces and states. */
+
+.page { background: radial-gradient(ellipse at 50% 20%, var(--color-surface-soft), transparent 68%); }
+.card { max-width: 490px; border-radius: 22px; }
+.eyebrow { color: var(--color-primary); font-size: 11px; letter-spacing: 1.7px; }
+.card h1 { letter-spacing: -.045em; font-weight: 600; }
+.switchText a { color: var(--color-primary); font-weight: 600; }
+.error { background: var(--color-danger-soft); }
+.success { background: var(--color-success-soft); }
+.card > .switchText { margin-top: 22px; }

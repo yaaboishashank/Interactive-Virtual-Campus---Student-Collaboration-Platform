@@ -1,0 +1,45 @@
+/* Pearl 02 / Duet: shared by every page. */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f8f9fd;
+  --color-surface: #ffffff;
+  --color-surface-soft: #edf1ff;
+  --color-surface-raised: #ffffff;
+  --color-text: #242d46;
+  --color-text-muted: #626e86;
+  --color-border: #dfe5f1;
+  --color-primary: #536bd8;
+  --color-primary-text: #ffffff;
+  --color-accent: #536bd8;
+  --color-tint: #d9e1fc;
+  --color-danger: #b12f4c;
+  --color-danger-soft: #fff0f3;
+  --color-success: #286a52;
+  --color-success-soft: #eaf6f0;
+  --color-focus: #536bd8;
+  --shadow-card: 0 14px 42px #3c528812;
+  --shadow-button: 0 5px 16px #3c52881a;
+  --shadow-float: 0 22px 60px #3c528824;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #101622;
+  --color-surface: #1a2233;
+  --color-surface-soft: #202e49;
+  --color-surface-raised: #212b40;
+  --color-text: #eff3ff;
+  --color-text-muted: #adb8cf;
+  --color-border: #303d56;
+  --color-primary: #b0c0ff;
+  --color-primary-text: #182346;
+  --color-accent: #b0c0ff;
+  --color-tint: #334768;
+  --color-danger: #ffadc0;
+  --color-danger-soft: #382332;
+  --color-success: #8bd9b3;
+  --color-success-soft: #1b352f;
+  --color-focus: #b0c0ff;
+  --shadow-card: 0 14px 42px #00000026;
+  --shadow-button: 0 5px 16px #00000029;
+  --shadow-float: 0 22px 60px #00000045;
+}

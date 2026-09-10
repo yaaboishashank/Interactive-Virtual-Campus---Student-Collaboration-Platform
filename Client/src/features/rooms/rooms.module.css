@@ -1,0 +1,316 @@
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 72px;
+  color: var(--color-text);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+.hero,
+.roomCard,
+.formPanel {
+  padding: clamp(20px, 4vw, 32px);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.hero h1 {
+  margin: 20px 0 12px;
+  color: var(--color-text);
+  font-size: clamp(30px, 5vw, 48px);
+  overflow-wrap: anywhere;
+}
+
+.hero p,
+.sectionHeader p,
+.roomCard p,
+.formPanel > p,
+.state p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.meta {
+  display: block;
+  margin-top: 20px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 6px 10px;
+  color: var(--color-text);
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.sectionHeader,
+.row,
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sectionHeader {
+  margin: 40px 0 24px;
+  flex-wrap: wrap;
+}
+
+.sectionHeader h2,
+.formPanel h2 {
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.sectionHeader p {
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.roomCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  transition: transform 180ms ease;
+}
+
+.roomCard h3 {
+  margin: 0;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.roomCard p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.roomIcon {
+  color: var(--color-primary);
+}
+
+.capacity,
+.locked {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.capacity {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.formPanel {
+  margin-bottom: 28px;
+}
+
+.fields {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  color: var(--color-text);
+}
+
+.field textarea,
+.field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 12px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.field textarea:focus-visible,
+.field select:focus-visible,
+.back:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text);
+}
+
+.checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.actions {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.state {
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.state h3 {
+  color: var(--color-text);
+}
+
+.error,
+.success {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.error {
+  color: var(--color-danger);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+@media (hover: hover) {
+  .roomCard:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .grid,
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roomCard {
+    transition: none;
+  }
+
+  .roomCard:hover {
+    transform: none;
+  }
+}
+
+.managementActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.managementActions button {
+  width: 100%;
+}
+
+.owner small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.errorMessage,
+.successMessage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.errorMessage {
+  color: var(--color-danger);
+}
+
+.successMessage {
+  color: var(--color-success);
+}
+
+.errorMessage button,
+.successMessage button {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .managementActions {
+    grid-template-columns: 1fr;
+  }
+}
+/* Pearl 02 component surfaces and states. */
+
+.hero { background: radial-gradient(ellipse at 100% 0,var(--color-surface-soft),transparent 70%),var(--color-surface); }
+.badge { border-radius: var(--radius-pill); color: var(--color-primary); }
+.back { color: var(--color-text-muted); font-size: 14px; }
+.owner { display: flex; align-items: center; gap: 12px; margin-top: 24px; }
+.ownerAvatar { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; background: var(--color-surface-soft); color: var(--color-primary); border: 1px solid var(--color-border); border-radius: 50%; font-weight: 600; }
+.owner > div { min-width: 0; }
+.owner small { color: var(--color-text-muted); margin-bottom: 4px; }
+.owner strong { color: var(--color-text); overflow-wrap: anywhere; }
+.error, .errorMessage { background: var(--color-danger-soft); }
+.success, .successMessage { background: var(--color-success-soft); }

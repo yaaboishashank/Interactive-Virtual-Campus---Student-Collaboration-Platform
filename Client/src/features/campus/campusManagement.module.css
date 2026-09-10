@@ -1,0 +1,179 @@
+.panel {
+  margin-block: 2rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  color: inherit;
+  background: transparent;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: inherit;
+}
+
+.header p {
+  margin: 0.5rem 0 0;
+  color: inherit;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.identity {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 0.25rem;
+}
+
+.identity strong {
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.fields {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  margin-bottom: 1rem;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+  color: inherit;
+}
+
+.field input,
+.field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: 1px solid var(--color-border);
+  outline-offset: 3px;
+}
+
+.fields:disabled {
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .members {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatarOnline::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--color-surface, #ffffff);
+  border-radius: 50%;
+  background: #22c55e;
+}
+/* Pearl 02 component surfaces and states. */
+
+.panel { background: var(--color-surface); color: var(--color-text); box-shadow: var(--shadow-card); border-radius: var(--radius-lg); }
+.header p, .identity small, .field small { color: var(--color-text-muted); }
+.header h2, .legend, .identity strong { color: var(--color-text); }
+.member { background: var(--color-bg); flex-wrap: wrap; }
+.identity { min-width: 90px; }
+.avatar { background: var(--color-surface-soft); color: var(--color-primary); border-radius: 13px; }
+.badge { background: var(--color-surface-soft); color: var(--color-primary); border-radius: var(--radius-pill); }
+.field input, .field textarea { background: var(--color-bg); color: var(--color-text); }
+.field input:focus-visible, .field textarea:focus-visible { outline-color: var(--color-focus); }
+.panel > p[role="alert"], .fields > p[role="alert"] { color: var(--color-danger); background: var(--color-danger-soft); padding: 12px; border-radius: 10px; }
+.panel > p[role="status"] { color: var(--color-success); }
+.avatarOnline::after { background: var(--color-success); border-color: var(--color-surface); }

@@ -1,0 +1,14 @@
+.card {
+  padding: var(--space-6);
+  color: var(--color-text);
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+/* Pearl 02 component surfaces and states. */

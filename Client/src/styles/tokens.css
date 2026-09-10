@@ -1,0 +1,17 @@
+:root {
+  --font-primary: "DM Sans", system-ui, sans-serif;
+  --font-heading: "Manrope", "DM Sans", system-ui, sans-serif;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --transition-fast: 180ms ease;
+}

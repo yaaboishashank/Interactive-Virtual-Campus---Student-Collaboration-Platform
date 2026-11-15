@@ -94,8 +94,8 @@ The most important lesson was that building a feature is only the beginning. Han
 Clone the repository:
 
 ```bash
-git clone https://github.com/yaaboishashank/CampusVerse_Your.git
-cd CampusVerse_Your
+git clone https://github.com/yaaboishashank/Interactive-Virtual-Campus---Student-Collaboration-Platform.git campusverse
+cd campusverse
 ```
 
 Install and run the backend:
@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-Open another terminal and run the frontend:
+Open another terminal from the repository root (`campusverse/`) and run the frontend:
 
 ```bash
 cd Client

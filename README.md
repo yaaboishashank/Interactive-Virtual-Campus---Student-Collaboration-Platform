@@ -114,7 +114,26 @@ npm install
 npm run dev
 ```
 
-Add the required environment variables inside the `Client` and `Server` folders before starting the application.
+## Environment Variables
+
+Create a `.env` file in the `Server` folder:
+
+| Variable | Purpose | Local example |
+|---|---|---|
+| `PORT` | Port the API listens on (default `6001`) | `6001` |
+| `MONGODB_URI` | MongoDB connection string (local or Atlas) | `mongodb://127.0.0.1:27017/campusverse` |
+| `JWT_SECRET` | Secret used to sign and verify login tokens | any long random string |
+| `JWT_EXPIRES_IN` | Token lifetime (default `7d`) | `7d` |
+| `CLIENT_URL` | Allowed CORS origin for the API and Socket.IO | `http://localhost:5173` |
+
+Create a `.env` file in the `Client` folder:
+
+| Variable | Purpose | Local example |
+|---|---|---|
+| `VITE_API_URL` | Base URL for REST API calls (includes `/api`) | `http://localhost:6001/api` |
+| `VITE_SOCKET_URL` | Socket.IO server URL | `http://localhost:6001` |
+
+With both running, the API health check is at `http://localhost:6001/api/health` and the Vite dev server serves the app on port 5173.
 
 ## Current Status
 
